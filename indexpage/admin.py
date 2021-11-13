@@ -2,12 +2,11 @@ from django.contrib import admin
 from .models import Team, Project,Testimonial, Service, Patners, Awards,Appoinment
 # Register your models here.
 
-class TeamlAdmin(admin.ModelAdmin):
+class TeamAdmin(admin.ModelAdmin):
 
     list_display = ['title', 'image']
     search_fields = ['title']
-
-admin.site.register(Team, TeamlAdmin)
+admin.site.register(Team, TeamAdmin)
 
 
 class ProjectAdmin(admin.ModelAdmin):
