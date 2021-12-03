@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Team, Project,Testimonial, Service, Patners, Awards,Appoinment
+from .models import Contact, Team, Project,Testimonial, Service, Patners, Awards,Appointment,Services,ProjectAbout,Post,Commant
 # Register your models here.
 
 class TeamAdmin(admin.ModelAdmin):
@@ -40,7 +40,31 @@ class AwardsAdmin(admin.ModelAdmin):
 
 admin.site.register(Awards,AwardsAdmin)
 
-class AppoinmentAdmin(admin.ModelAdmin):
-    list_display = ['name','email','department']
+class AppiontmentAdmin(admin.ModelAdmin):
+    list_display = ['name','email','subject']
+    search_field =['subject']
+admin.site.register(Appointment,AppiontmentAdmin)
 
-admin.site.register(Appoinment,AppoinmentAdmin)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ['name','email','subject','massage']
+    search_field =['subject']
+admin.site.register(Contact,ContactAdmin)
+
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ['title','description','image']
+admin.site.register(Services,ServiceAdmin)
+
+class ProjectAboutAdmin(admin.ModelAdmin):
+    list_display = ['title','image']
+    search_field = ['title']
+
+admin.site.register(ProjectAbout,ProjectAboutAdmin)
+
+class PostAdmin(admin.ModelAdmin):
+    list_display = ['title','body']
+    search_field =['title']
+admin.site.register(Post,PostAdmin)
+
+class CommantAdmin(admin.ModelAdmin):
+    list_display = ['name','email']
+admin.site.register(Commant,CommantAdmin)
