@@ -12819,7 +12819,7 @@ fieldset:disabled .btn {
         display: none !important
     }
 }
-
+/*
 @font-face {
     font-family: 'CerebriSans';
     src: url(../../fonts/cerebrisans/CerebriSans-Regular.eot);
@@ -12890,7 +12890,7 @@ fieldset:disabled .btn {
     font-weight: 900;
     font-style: normal;
     font-display: swap
-}
+}*/
 
 .fa,
 .fab,
